@@ -2,13 +2,7 @@ termux-setup-storage
 #Asks for storage permissions
 
 sleep 5s
-apt update && apt upgrade -y 
-#Updates and upgrades termux pakages
-
-echo "..."
-echo "installing python "
-pkg install python -y 
-#Installs python
+apt update && apt upgrade && apt install python ffmpeg
 
 echo "..."
 echo "installing youtube-dl"
@@ -29,7 +23,7 @@ echo '-o /data/data/com.termux/files/home/storage/shared/Download/Youtube-downlo
 mkdir ~/bin  
 #Creates bin foler for termux-url-opener
 
-echo 'youtube-dl $1' >> ~/bin/termux-url-opener 
+echo 'url=$1 youtube-dl $url' >> ~/bin/termux-url-opener 
 #Creates file to open youtube links by directly sharing with termux app
 
 cd ~
