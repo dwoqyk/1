@@ -23,7 +23,7 @@ mkdir /data/data/com.termux/files/home/storage/shared/Download/Youtube-downloads
 mkdir -p ~/.config/youtube-dl  
 #Creates youtube-dl config folder
 
-echo '/data/data/com.termux/files/home/storage/shared/Download/Youtube-downloads/%(extractor_key)s/%(uploader)s/%(title)s-%(id)s.%(ext)s' >> ~/.config/youtube-dl/config 
+echo '-o /data/data/com.termux/files/home/storage/shared/Download/Youtube-downloads/%(extractor_key)s/%(uploader)s/%(title)s-%(id)s.%(ext)s' >> ~/.config/youtube-dl/config 
 #Creates config file for youtube-dl in "[height<=1080]" 1080 can be replace for any other resolution, this will set the maximum resolution available that will be downloaded
 
 mkdir ~/bin  
