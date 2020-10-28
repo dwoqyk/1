@@ -17,13 +17,13 @@ pip install youtube-dl
 
 echo "..."
 echo "configuring youtube-dl"
-mkdir /data/data/com.termux/files/home/storage/shared/Youtube-downloads 
+mkdir /data/data/com.termux/files/home/storage/shared/Download/Youtube-downloads 
 #Creates folder where the videos will be downloaded
 
 mkdir -p ~/.config/youtube-dl  
 #Creates youtube-dl config folder
 
-echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"' >> ~/.config/youtube-dl/config 
+echo '/data/data/com.termux/files/home/storage/shared/Download/Youtube-downloads/%(extractor_key)s/%(uploader)s/%(title)s-%(id)s.%(ext)s' >> ~/.config/youtube-dl/config 
 #Creates config file for youtube-dl in "[height<=1080]" 1080 can be replace for any other resolution, this will set the maximum resolution available that will be downloaded
 
 mkdir ~/bin  
